@@ -6,4 +6,4 @@ Vue.use(CollectionView);
 
 new Vue({
   render: (h) => h('frame', [h(Index)]),
-}).$start();
+}).$start()

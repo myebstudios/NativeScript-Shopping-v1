@@ -9,7 +9,7 @@
                         <Label class="p" text="Shop for daily essentials" />
                     </FlexboxLayout>
 
-                    <ScrollView scrollBarIndicatorVisible="false" height="100%" width="100%">
+                    <ScrollView :hidden="loading" scrollBarIndicatorVisible="false" height="100%" width="100%">
                         <CollectionView
                             :items="products"
                             colWidth="47%"
@@ -23,6 +23,7 @@
                     </ScrollView>
                 </StackLayout>
 
+                <Spinner :show="loading" />
                 <FabBtn />
         </AbsoluteLayout>
     </Page>
@@ -32,10 +33,12 @@
     import TopBar from '~/components/TopBar';
     import Product from '~/components/Product';
     import FabBtn from '~/components/FabBtn';
+    import Spinner from '~/components/Spinner';
 
     export default {
         data() {
             return {
+                loading: false,
                 products: [
                     {
                         id: 0,
@@ -86,12 +89,12 @@
             TopBar,
             Product,
             FabBtn,
+            Spinner,
         },
     }
 </script>
 
 <style scoped>
-
     .container {
         padding-top: 50;
     }

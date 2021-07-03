@@ -1,6 +1,6 @@
 <template>
     <FlexboxLayout class="fab-btn">
-        <Image width="20" src="~/images/icons/sliders_icon.png" />
+        <Image width="22" src="~/images/icons/shopping_icon.png" />
     </FlexboxLayout>
 </template>
 

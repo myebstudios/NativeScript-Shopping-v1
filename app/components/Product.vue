@@ -37,6 +37,7 @@ export default {
         flex-direction: column;
         padding: 16;
         justify-content: space-between;
+        animation: fade-in 300ms ease-in-out;
     }
 
     .details {
@@ -58,5 +59,16 @@ export default {
 
     .fav {
         align-self: flex-end;
+    }
+
+    @keyframes fade-in {
+        0% {
+            transform: scale(0.5);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
     }
 </style>
