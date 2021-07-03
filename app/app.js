@@ -1,7 +1,9 @@
-import Vue from 'nativescript-vue'
+import Vue from 'nativescript-vue';
+import Index from './views/Index';
+import CollectionView from '@nativescript-community/ui-collectionview/vue';
+Vue.use(CollectionView);
 
-import Home from './components/Home'
 
 new Vue({
-  render: (h) => h('frame', [h(Home)]),
-}).$start()
+  render: (h) => h('frame', [h(Index)]),
+}).$start();
